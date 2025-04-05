@@ -1,14 +1,20 @@
-package com.example.movies;
+package com.example.movies.model;
+import jakarta.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
+@Table(name = "pelicula")
 public class Pelicula {
-    private int id;
+    @Id
+    private long id;
     private String titulo;
     private int año;
     private String director;
     private String genero;
     private String sinopsis;
 
-    public Pelicula(int id, String titulo, int año, String director, String genero, String sinopsis) {
+    public Pelicula(long id, String titulo, int año, String director, String genero, String sinopsis) {
         this.id = id;
         this.titulo = titulo;
         this.año = año;
@@ -17,8 +23,11 @@ public class Pelicula {
         this.sinopsis = sinopsis;
     }
 
+    public Pelicula() {        
+    }
+
     // Getters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -41,8 +50,5 @@ public class Pelicula {
     public String getSinopsis() {
         return sinopsis;
     }
-
-    // No añadiré los setters aún puesto que no se requieren en este caso.
-    
    
 }
