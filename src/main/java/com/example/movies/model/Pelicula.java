@@ -30,25 +30,40 @@ public class Pelicula {
     public long getId() {
         return id;
     }
-
     public String getTitulo() {
         return titulo;
     }
-
     public int getAño() {
         return año;
     }
-
     public String getDirector() {
         return director;
     }
-
     public String getGenero() {
         return genero;
     }
-
     public String getSinopsis() {
         return sinopsis;
+    }
+
+    // Setters
+    public void setId(long id) {
+        this.id = id;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public void setAño(int año) {
+        this.año = año;
+    }
+    public void setDirector(String director) {
+        this.director = director;
+    }
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
     }
    
 }
