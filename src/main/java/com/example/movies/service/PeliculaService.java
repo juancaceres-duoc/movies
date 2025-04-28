@@ -1,6 +1,5 @@
 package com.example.movies.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.movies.repository.PeliculaRepository;
@@ -12,8 +11,12 @@ import java.util.List;
 @Service
 public class PeliculaService {   
 
-    @Autowired
+    
     private PeliculaRepository repo;
+
+    public PeliculaService( PeliculaRepository repo) {
+        this.repo = repo;
+    }
 
     public List<Pelicula> obtenerTodas() {
         return repo.findAll();
